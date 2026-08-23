@@ -492,5 +492,4 @@ section {
   .amenity-grid { grid-template-columns: 1fr; }
   .gallery__grid { grid-template-columns: 1fr; }
   .sleep-grid { grid-template-columns: 1fr; }
-  .story { grid-template-columns: 24px 1fr; }
 }
