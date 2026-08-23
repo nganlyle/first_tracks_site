@@ -1,0 +1,498 @@
+/* ---------------------------------------------------
+   Design tokens
+--------------------------------------------------- */
+:root {
+  --pine-950: #14261D;
+  --pine-800: #1F3A2E;
+  --pine-700: #2A4B3A;
+  --snow-050: #FBFAF6;
+  --snow-100: #F3EFE5;
+  --amber-500: #C97A2B;
+  --amber-300: #E3A85C;
+  --charcoal-900: #241F1B;
+  --mist-400: #8FA89B;
+  --rust-500: #A63D2F;
+  --run-green: #2E7D4F;
+  --run-blue: #2C5FA6;
+  --run-black: #1B1712;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Work Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --radius: 4px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--charcoal-900);
+  background: var(--snow-050);
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+a { color: inherit; }
+
+section {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.section__lede {
+  color: #55524B;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------------
+   Hero
+--------------------------------------------------- */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, var(--pine-950) 0%, var(--pine-800) 65%, var(--pine-700) 100%);
+  color: var(--snow-050);
+  overflow: hidden;
+  padding-bottom: 6rem;
+}
+
+.hero__contour {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+.hero__contour path {
+  fill: none;
+  stroke: var(--mist-400);
+  stroke-width: 1.4;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0;
+}
+
+.nav__mark {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+.nav__cta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: 1px solid rgba(251, 250, 246, 0.4);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.nav__cta:hover {
+  border-color: var(--amber-300);
+  background: rgba(201, 122, 43, 0.15);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem 0;
+  text-align: left;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber-300);
+  margin: 0 0 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 span {
+  color: var(--snow-100);
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.hero__sub {
+  font-size: 1.05rem;
+  max-width: 46ch;
+  color: rgba(251, 250, 246, 0.85);
+  margin-bottom: 1.75rem;
+}
+
+.hero__badges {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.25rem;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: var(--amber-500);
+  color: var(--snow-050);
+}
+
+.badge--outline {
+  background: transparent;
+  border: 1px solid rgba(251, 250, 246, 0.4);
+}
+
+/* ---------------------------------------------------
+   Buttons
+--------------------------------------------------- */
+.button {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--snow-050);
+  background: var(--amber-500);
+  padding: 0.9rem 1.6rem;
+  border-radius: var(--radius);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.button:hover {
+  background: var(--amber-300);
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------
+   Gallery
+--------------------------------------------------- */
+.gallery {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  max-width: 960px;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.gallery__grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--snow-100);
+}
+
+.gallery__note {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #918D82;
+  margin-top: 0.75rem;
+}
+
+/* ---------------------------------------------------
+   Story
+--------------------------------------------------- */
+.story {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 1.5rem;
+}
+
+.story__marker {
+  color: var(--run-black);
+  font-size: 1.2rem;
+  padding-top: 0.35rem;
+}
+
+.story h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.story p {
+  margin: 0 0 1.1rem;
+  color: #3A362F;
+}
+
+/* ---------------------------------------------------
+   Amenities — ski run difficulty marks
+--------------------------------------------------- */
+.amenities h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.amenity-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem 2rem;
+}
+
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.run-mark {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}
+
+.run-mark--green {
+  background: var(--run-green);
+  border-radius: 50%;
+}
+
+.run-mark--blue {
+  background: var(--run-blue);
+  transform: rotate(45deg);
+}
+
+.run-mark--black {
+  background: var(--run-black);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------------------------------------------------
+   Sleeping arrangements
+--------------------------------------------------- */
+.sleep h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.sleep-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.sleep-card {
+  background: var(--snow-100);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.sleep-card__room {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pine-700);
+  margin: 0 0 0.5rem;
+}
+
+.sleep-card__bed {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+/* ---------------------------------------------------
+   Availability calendar
+--------------------------------------------------- */
+.availability h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.calendar {
+  background: var(--snow-100);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.calendar__header button {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--pine-800);
+  line-height: 1;
+  padding: 0.25rem 0.6rem;
+}
+
+.calendar__header h3 {
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-align: center;
+  color: #8A8577;
+  margin-bottom: 0.5rem;
+}
+
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.day {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: var(--snow-050);
+  color: var(--charcoal-900);
+}
+
+.day--empty {
+  background: transparent;
+}
+
+.day--busy {
+  background: var(--pine-800);
+  color: var(--snow-050);
+}
+
+.day--past {
+  opacity: 0.35;
+}
+
+.calendar__legend {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #55524B;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.dot--free { background: var(--snow-050); border: 1px solid #D8D3C6; }
+.dot--busy { background: var(--pine-800); }
+
+.calendar__updated {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #918D82;
+  margin-top: 0.75rem;
+}
+
+/* ---------------------------------------------------
+   How to book
+--------------------------------------------------- */
+.how h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.how-list {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.how-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.how-list__num {
+  font-family: var(--font-mono);
+  color: var(--amber-500);
+  font-size: 0.85rem;
+}
+
+/* ---------------------------------------------------
+   Footer
+--------------------------------------------------- */
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #7C7869;
+}
+
+.footer__muted {
+  opacity: 0.65;
+  margin-top: 0.35rem;
+}
+
+/* ---------------------------------------------------
+   Responsive
+--------------------------------------------------- */
+@media (max-width: 640px) {
+  .amenity-grid { grid-template-columns: 1fr; }
+  .gallery__grid { grid-template-columns: 1fr; }
+  .sleep-grid { grid-template-columns: 1fr; }
+  .story { grid-template-columns: 24px 1fr; }
+}

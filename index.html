@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>First Tracks at the Monashee Inn — Big White, BC</title>
+<meta name="description" content="A cozy 1-bedroom condo with a private sauna and mountain views, 4 minutes from the lifts at Big White. Book direct." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <svg class="hero__contour" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,420 C150,380 280,440 420,400 C560,360 640,410 800,380 C950,352 1050,400 1200,370" />
+      <path d="M0,460 C150,420 280,470 420,440 C560,410 640,450 800,430 C950,410 1050,445 1200,420" />
+      <path d="M0,340 C150,300 280,360 420,320 C560,285 640,330 800,300 C950,272 1050,315 1200,290" />
+    </svg>
+
+    <nav class="nav">
+      <span class="nav__mark">First&nbsp;Tracks</span>
+      <a class="nav__cta" href="#availability">Check dates</a>
+    </nav>
+
+    <div class="hero__content">
+      <p class="eyebrow">Big White · British&nbsp;Columbia</p>
+      <h1>First Tracks<br><span>at the Monashee&nbsp;Inn</span></h1>
+      <p class="hero__sub">A 620&nbsp;sq&nbsp;ft corner condo with a private sauna and an electric fireplace, a 4-minute walk from three express lifts.</p>
+      <div class="hero__badges">
+        <span class="badge">★ 5.0 · Guest Favourite</span>
+        <span class="badge badge--outline">1 Bed · Sleeps 4</span>
+      </div>
+      <a class="button" href="#availability">Check availability</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="gallery" id="gallery">
+      <div class="gallery__grid">
+        <img src="assets/photos/living-room.jpg" alt="Living room with electric fireplace and mountain view" loading="lazy">
+        <img src="assets/photos/sauna.jpg" alt="Private indoor sauna" loading="lazy">
+        <img src="assets/photos/bedroom.jpg" alt="Bedroom with king bed" loading="lazy">
+      </div>
+      <p class="gallery__note">Swap these for your own photos — see the README for exactly where they go.</p>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story__marker" aria-hidden="true">◆</div>
+      <div class="story__text">
+        <h2>One of Big White's original, cherished buildings</h2>
+        <p>This location is one of the best on the mountain — just a 4-minute walk to the hill, with ski-out access to three express lifts and the Village a short stroll away. It's a taste of simpler times, with sweeping views and an authentic mountain-community feel.</p>
+        <p>Large windows on two sides fill the corner unit with light and warm southwest exposure. After a day on the slopes, unwind in your own private indoor sauna — added in 2024 — then curl up by the electric fireplace. Watch the Saturday night fireworks from the couch, or head down to the lobby to mingle with other guests.</p>
+        <p>The kitchen is fully equipped, including a dishwasher, a regular coffee maker with a reusable filter, and a Nespresso machine (bring your own Original Line capsules). Free on-site parking is available for one vehicle, first come first served — let us know ahead of time if you'll need a second spot.</p>
+      </div>
+    </section>
+
+    <section class="amenities" id="amenities">
+      <h2>What's here</h2>
+      <p class="section__lede">Marked the way we'd mark a run — the signature features are black diamonds.</p>
+      <ul class="amenity-grid">
+        <li class="amenity"><span class="run-mark run-mark--black" title="Signature feature"></span>Private indoor sauna</li>
+        <li class="amenity"><span class="run-mark run-mark--black" title="Signature feature"></span>Electric fireplace</li>
+        <li class="amenity"><span class="run-mark run-mark--black" title="Signature feature"></span>Mountain view</li>
+        <li class="amenity"><span class="run-mark run-mark--green" title="Easy"></span>Ski-out to 3 express lifts</li>
+        <li class="amenity"><span class="run-mark run-mark--green" title="Easy"></span>Fully equipped kitchen + dishwasher</li>
+        <li class="amenity"><span class="run-mark run-mark--green" title="Easy"></span>Coffee maker + Nespresso</li>
+        <li class="amenity"><span class="run-mark run-mark--green" title="Easy"></span>Wifi</li>
+        <li class="amenity"><span class="run-mark run-mark--blue" title="Good to know"></span>Free on-site parking (1 space)</li>
+        <li class="amenity"><span class="run-mark run-mark--blue" title="Good to know"></span>Self check-in (keypad)</li>
+        <li class="amenity"><span class="run-mark run-mark--blue" title="Good to know"></span>Shared laundry room</li>
+      </ul>
+    </section>
+
+    <section class="sleep" id="sleep">
+      <h2>Where you'll sleep</h2>
+      <div class="sleep-grid">
+        <div class="sleep-card">
+          <p class="sleep-card__room">Bedroom</p>
+          <p class="sleep-card__bed">1 King Bed</p>
+        </div>
+        <div class="sleep-card">
+          <p class="sleep-card__room">Living Room</p>
+          <p class="sleep-card__bed">1 Double Sofa Bed</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="availability" id="availability">
+      <h2>Check availability</h2>
+      <p class="section__lede">This calendar pulls from Airbnb automatically every few hours, so what you see here stays current.</p>
+
+      <div class="calendar" id="calendar">
+        <div class="calendar__header">
+          <button id="prevMonth" aria-label="Previous month">‹</button>
+          <h3 id="calendarLabel"></h3>
+          <button id="nextMonth" aria-label="Next month">›</button>
+        </div>
+        <div class="calendar__weekdays">
+          <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+        </div>
+        <div class="calendar__grid" id="calendarGrid"></div>
+        <div class="calendar__legend">
+          <span><i class="dot dot--free"></i> Open</span>
+          <span><i class="dot dot--busy"></i> Booked</span>
+        </div>
+      </div>
+      <p class="calendar__updated" id="lastUpdated"></p>
+    </section>
+
+    <section class="how" id="book">
+      <h2>How to book direct</h2>
+      <ol class="how-list">
+        <li><span class="how-list__num">01</span>Find open dates on the calendar above.</li>
+        <li><span class="how-list__num">02</span>Send a message with your dates and number of guests.</li>
+        <li><span class="how-list__num">03</span>I'll confirm availability and the total price.</li>
+        <li><span class="how-list__num">04</span>Send payment by e-transfer to lock in your dates.</li>
+      </ol>
+      <a class="button" href="mailto:youremail@example.com?subject=First%20Tracks%20booking%20request">Email to book</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>First Tracks at the Monashee Inn · Big White, BC</p>
+    <p class="footer__muted">Provincial registration H040962837</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
