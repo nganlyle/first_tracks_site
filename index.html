@@ -6,30 +6,36 @@
 
 <title>South Light Stays | Mountain & Lake Vacation Rentals</title>
 
-<meta name="description" content="South Light Stays offers mountain and lake stays chosen for light, location and comfort." />
+<meta
+  name="description"
+  content="South Light Stays offers mountain and lake stays chosen for light, location and comfort."
+/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
+  rel="stylesheet"
+>
 
 <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
-<body>
+<body class="brand-home">
 
-<header class="brand-hero">
+<header class="brand-header">
 
-  <div class="brand-hero__content">
+  <div class="brand-header__inner">
 
-    <p class="brand-hero__name">South Light Stays</p>
+    <a class="brand-logo" href="index.html">
+      South Light Stays
+    </a>
 
-    <h1 class="brand-hero__tagline">
-      Mountain &amp; lake stays chosen for light, location and comfort.
-    </h1>
-
-    <p class="brand-hero__intro">
-      We look for places with exceptional natural light, thoughtful layouts and great locations—and whenever possible, a southern outlook that brings warmth and light into the space.
-    </p>
+    <nav class="brand-nav">
+      <a href="#stays">Stays</a>
+      <a href="#about">About</a>
+    </nav>
 
   </div>
 
@@ -38,69 +44,147 @@
 
 <main>
 
-  <section class="properties">
+  <!-- INTRO -->
 
-    <div class="property-grid">
+  <section class="brand-intro">
 
-      <article class="property-card property-card--mountain">
+    <div class="brand-intro__inner">
 
-        <div class="property-card__image">
-          <img
-            src="assets/photos/monashee_living2.jpg"
-            alt="Living room at First Tracks at the Monashee Inn"
-          >
+      <p class="brand-kicker">British Columbia</p>
+
+      <h1>
+        Mountain &amp; lake stays chosen for light, location and comfort.
+      </h1>
+
+      <p class="brand-intro__text">
+        We look for places with exceptional natural light, thoughtful layouts
+        and great locations—and whenever possible, a southern outlook that
+        brings warmth and light into the space.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- STAYS -->
+
+  <section class="stays" id="stays">
+
+    <div class="section-heading">
+      <p class="brand-kicker">Our stays</p>
+    </div>
+
+
+    <!-- MOUNTAIN -->
+
+    <article class="stay-feature">
+
+      <a href="mountain.html" class="stay-feature__image">
+
+        <img
+          src="assets/photos/monashee_living2.jpg"
+          alt="Living room at First Tracks at the Monashee Inn"
+        >
+
+      </a>
+
+      <div class="stay-feature__details">
+
+        <div>
+
+          <p class="stay-feature__type">
+            Mountain
+          </p>
+
+          <h2>
+            First Tracks at<br>
+            the Monashee Inn
+          </h2>
+
+          <p class="stay-feature__location">
+            Big White, British Columbia
+          </p>
+
         </div>
 
-        <div class="property-card__content">
-
-          <p class="property-card__eyebrow">Mountain</p>
-
-          <h2>First Tracks at the Monashee Inn</h2>
-
-          <p class="property-card__location">
-            Big White, BC
-          </p>
+        <div class="stay-feature__description">
 
           <p>
-            A 1-bedroom ski condo with mountain views, a private sauna and easy access to the lifts.
+            A 1-bedroom ski condo with mountain views, a private sauna
+            and easy access to the lifts.
           </p>
 
-          <a class="property-card__link" href="mountain.html">
-            Explore the stay →
+          <a href="mountain.html" class="text-link">
+            Explore the stay <span>→</span>
           </a>
 
         </div>
 
-      </article>
+      </div>
+
+    </article>
 
 
-      <article class="property-card property-card--lake">
+    <!-- LAKE -->
 
-        <div class="property-card__placeholder">
-          <span>Lake</span>
+    <article class="stay-feature stay-feature--lake">
+
+      <div class="stay-feature__image stay-feature__image--placeholder">
+        <span>Lake</span>
+      </div>
+
+      <div class="stay-feature__details">
+
+        <div>
+
+          <p class="stay-feature__type">
+            Lake
+          </p>
+
+          <h2>
+            Kelowna
+          </h2>
+
+          <p class="stay-feature__location">
+            Okanagan Valley, British Columbia
+          </p>
+
         </div>
 
-        <div class="property-card__content">
-
-          <p class="property-card__eyebrow">Lake</p>
-
-          <h2>Kelowna</h2>
-
-          <p class="property-card__location">
-            Kelowna, BC
-          </p>
+        <div class="stay-feature__description">
 
           <p>
-            Our next South Light Stay. The property is currently a long-term home and will be available for vacation stays in the future.
+            Our next South Light Stay. The property is currently a
+            long-term home and will be available for vacation stays
+            in the future.
           </p>
 
-          <span class="property-card__coming">
+          <span class="coming-soon">
             Coming soon
           </span>
 
         </div>
 
-      </article>
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="brand-about" id="about">
+
+    <div class="brand-about__inner">
+
+      <p class="brand-kicker">South Light Stays</p>
+
+      <p class="brand-about__statement">
+        Thoughtful places in beautiful British Columbia, selected for
+        the way they feel as much as where they are.
+      </p>
 
     </div>
 
@@ -109,8 +193,16 @@
 </main>
 
 
-<footer class="footer">
-  <p>South Light Stays · British Columbia</p>
+<footer class="brand-footer">
+
+  <div class="brand-footer__inner">
+
+    <span>South Light Stays</span>
+
+    <span>British Columbia</span>
+
+  </div>
+
 </footer>
 
 </body>
