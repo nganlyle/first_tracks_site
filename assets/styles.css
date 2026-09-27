@@ -1057,6 +1057,27 @@ body.brand-home .brand-footer__inner {
   body.brand-home .brand-footer__inner {
     width: calc(100% - 2.5rem);
 
+/* ---------------------------------------------------
+   South Light Stays brand link on property pages
+--------------------------------------------------- */
+
+.nav__mark--link {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  color: var(--snow-050);
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.nav__mark--link:hover {
+  color: var(--amber-300);
+}
+
     padding: 1.25rem 0;
   }
 
