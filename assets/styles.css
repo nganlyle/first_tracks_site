@@ -6,13 +6,18 @@
   --pine-950: #14261D;
   --pine-800: #1F3A2E;
   --pine-700: #2A4B3A;
+
   --snow-050: #FBFAF6;
   --snow-100: #F3EFE5;
+
   --amber-500: #C97A2B;
   --amber-300: #E3A85C;
+
   --charcoal-900: #241F1B;
   --mist-400: #8FA89B;
+
   --rust-500: #A63D2F;
+
   --run-green: #2E7D4F;
   --run-blue: #2C5FA6;
   --run-black: #1B1712;
@@ -107,14 +112,22 @@ section {
   stroke-width: 1.4;
 }
 
+
+/* ---------------------------------------------------
+   Property navigation
+--------------------------------------------------- */
+
 .nav {
   position: relative;
   z-index: 2;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   max-width: 780px;
   margin: 0 auto;
+
   padding: 2rem 1.5rem 0;
 }
 
@@ -125,15 +138,42 @@ section {
   font-size: 0.8rem;
 }
 
+
+/* South Light Stays brand link */
+
+.nav__mark--link {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  color: var(--snow-050);
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.nav__mark--link:hover {
+  color: var(--amber-300);
+}
+
+
+/* Check dates */
+
 .nav__cta {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+
   text-decoration: none;
+
   border: 1px solid rgba(251, 250, 246, 0.4);
   padding: 0.5rem 0.9rem;
+
   border-radius: var(--radius);
+
   transition:
     border-color 0.2s ease,
     background 0.2s ease;
@@ -144,12 +184,20 @@ section {
   background: rgba(201, 122, 43, 0.15);
 }
 
+
+/* ---------------------------------------------------
+   Hero content
+--------------------------------------------------- */
+
 .hero__content {
   position: relative;
   z-index: 2;
+
   max-width: 640px;
   margin: 0 auto;
+
   padding: 5.5rem 1.5rem 0;
+
   text-align: left;
 }
 
@@ -158,13 +206,16 @@ section {
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
   color: var(--amber-300);
+
   margin: 0 0 1rem;
 }
 
 .hero h1 {
   font-size: clamp(2.6rem, 6vw, 4rem);
   line-height: 1.05;
+
   margin-bottom: 1.25rem;
 }
 
@@ -178,14 +229,22 @@ section {
 .hero__sub {
   font-size: 1.05rem;
   max-width: 46ch;
+
   color: rgba(251, 250, 246, 0.85);
+
   margin-bottom: 1.75rem;
 }
+
+
+/* ---------------------------------------------------
+   Property badges
+--------------------------------------------------- */
 
 .hero__badges {
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
+
   margin-bottom: 2.25rem;
 }
 
@@ -193,8 +252,11 @@ section {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
+
   padding: 0.4rem 0.75rem;
+
   border-radius: 999px;
+
   background: var(--amber-500);
   color: var(--snow-050);
 }
@@ -211,15 +273,21 @@ section {
 
 .button {
   display: inline-block;
+
   font-family: var(--font-mono);
   font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
   text-decoration: none;
+
   color: var(--snow-050);
   background: var(--amber-500);
+
   padding: 0.9rem 1.6rem;
+
   border-radius: var(--radius);
+
   transition:
     background 0.2s ease,
     transform 0.15s ease;
@@ -231,6 +299,23 @@ section {
 }
 
 
+/* Secondary / Airbnb button */
+
+.button--secondary {
+  color: var(--pine-800);
+  background: transparent;
+
+  border: 1px solid var(--pine-800);
+
+  margin-left: 0.75rem;
+}
+
+.button--secondary:hover {
+  color: var(--snow-050);
+  background: var(--pine-800);
+}
+
+
 /* ---------------------------------------------------
    Gallery
 --------------------------------------------------- */
@@ -238,27 +323,34 @@ section {
 .gallery {
   padding-top: 3rem;
   padding-bottom: 3rem;
+
   max-width: 960px;
 }
 
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   gap: 0.75rem;
 }
 
 .gallery__grid img {
   width: 100%;
   height: 220px;
+
   object-fit: cover;
+
   border-radius: var(--radius);
+
   background: var(--snow-100);
 }
 
 .gallery__note {
   font-family: var(--font-mono);
   font-size: 0.72rem;
+
   color: #918D82;
+
   margin-top: 0.75rem;
 }
 
@@ -274,16 +366,19 @@ section {
 .story__marker {
   color: var(--run-black);
   font-size: 1.4rem;
+
   margin-bottom: 0.75rem;
 }
 
 .story h2 {
   font-size: 1.9rem;
+
   margin-bottom: 1.25rem;
 }
 
 .story p {
   margin: 0 0 1.1rem;
+
   color: #3A362F;
 }
 
@@ -294,50 +389,62 @@ section {
 
 .amenities h2 {
   font-size: 1.9rem;
+
   margin-bottom: 0.5rem;
 }
 
 .amenity-grid {
   list-style: none;
+
   margin: 0;
   padding: 0;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   gap: 0.9rem 2rem;
 }
 
 .amenity {
   display: flex;
   align-items: center;
+
   gap: 0.7rem;
+
   font-size: 0.95rem;
 }
 
 .run-mark {
   flex: none;
+
   width: 14px;
   height: 14px;
+
   display: inline-block;
 }
 
 .run-mark--green {
   background: var(--run-green);
+
   border-radius: 50%;
 }
 
 .run-mark--blue {
   background: var(--run-blue);
+
   transform: rotate(45deg);
 }
 
 .run-mark--black {
   background: var(--run-black);
+
   clip-path: polygon(
     50% 0%,
     100% 50%,
     50% 100%,
     0% 50%
   );
+
   width: 16px;
   height: 16px;
 }
@@ -349,33 +456,41 @@ section {
 
 .sleep h2 {
   font-size: 1.9rem;
+
   margin-bottom: 1.5rem;
 }
 
 .sleep-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   gap: 1rem;
 }
 
 .sleep-card {
   background: var(--snow-100);
+
   border-radius: var(--radius);
+
   padding: 1.5rem;
 }
 
 .sleep-card__room {
   font-family: var(--font-mono);
   font-size: 0.72rem;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
+
   color: var(--pine-700);
+
   margin: 0 0 0.5rem;
 }
 
 .sleep-card__bed {
   font-family: var(--font-display);
   font-size: 1.3rem;
+
   margin: 0;
 }
 
@@ -386,12 +501,15 @@ section {
 
 .availability h2 {
   font-size: 1.9rem;
+
   margin-bottom: 0.5rem;
 }
 
 .calendar {
   background: var(--snow-100);
+
   border-radius: 8px;
+
   padding: 1.5rem;
 }
 
@@ -399,21 +517,28 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   margin-bottom: 1rem;
 }
 
 .calendar__header button {
   background: none;
   border: none;
+
   font-size: 1.4rem;
+
   cursor: pointer;
+
   color: var(--pine-800);
+
   line-height: 1;
+
   padding: 0.25rem 0.6rem;
 }
 
 .calendar__header h3 {
   font-size: 1.1rem;
+
   font-family: var(--font-body);
   font-weight: 600;
 }
@@ -421,26 +546,35 @@ section {
 .calendar__weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+
   font-family: var(--font-mono);
   font-size: 0.7rem;
+
   text-align: center;
+
   color: #8A8577;
+
   margin-bottom: 0.5rem;
 }
 
 .calendar__grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+
   gap: 4px;
 }
 
 .day {
   aspect-ratio: 1 / 1;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 4px;
+
   font-size: 0.85rem;
+
   background: var(--snow-050);
   color: var(--charcoal-900);
 }
@@ -460,23 +594,32 @@ section {
 
 .calendar__legend {
   display: flex;
+
   gap: 1.25rem;
+
   margin-top: 1rem;
+
   font-size: 0.8rem;
+
   color: #55524B;
 }
 
 .dot {
   display: inline-block;
+
   width: 10px;
   height: 10px;
+
   border-radius: 50%;
+
   margin-right: 0.4rem;
+
   vertical-align: middle;
 }
 
 .dot--free {
   background: var(--snow-050);
+
   border: 1px solid #D8D3C6;
 }
 
@@ -487,7 +630,9 @@ section {
 .calendar__updated {
   font-family: var(--font-mono);
   font-size: 0.72rem;
+
   color: #918D82;
+
   margin-top: 0.75rem;
 }
 
@@ -498,27 +643,35 @@ section {
 
 .how h2 {
   font-size: 1.9rem;
+
   margin-bottom: 1.5rem;
 }
 
 .how-list {
   list-style: none;
+
   margin: 0 0 2rem;
   padding: 0;
+
   display: grid;
+
   gap: 0.9rem;
 }
 
 .how-list li {
   display: flex;
   align-items: baseline;
+
   gap: 1rem;
+
   font-size: 1rem;
 }
 
 .how-list__num {
   font-family: var(--font-mono);
+
   color: var(--amber-500);
+
   font-size: 0.85rem;
 }
 
@@ -529,14 +682,18 @@ section {
 
 .footer {
   text-align: center;
+
   padding: 3rem 1.5rem 4rem;
+
   font-family: var(--font-mono);
   font-size: 0.78rem;
+
   color: #7C7869;
 }
 
 .footer__muted {
   opacity: 0.65;
+
   margin-top: 0.35rem;
 }
 
@@ -544,7 +701,840 @@ section {
 /* ===================================================
    SOUTH LIGHT STAYS — HOMEPAGE
    =================================================== */
-    padding: 1.25rem 0;
+
+
+/* ---------------------------------------------------
+   Homepage base
+--------------------------------------------------- */
+
+body.brand-home {
+  margin: 0;
+  padding: 0;
+
+  background: #f7f5ef;
+  color: #292821;
+}
+
+
+/* ---------------------------------------------------
+   Homepage header
+--------------------------------------------------- */
+
+body.brand-home .brand-header {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #f7f5ef;
+
+  border: 0;
+}
+
+body.brand-home .brand-header__inner {
+  width: calc(100% - 4rem);
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 3.75rem 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.brand-home .brand-logo {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 2.15rem;
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.015em;
+
+  color: #292821;
+
+  text-decoration: none;
+
+  transition: opacity 0.2s ease;
+}
+
+body.brand-home .brand-logo:hover {
+  opacity: 0.7;
+}
+
+
+/* ---------------------------------------------------
+   Homepage introduction
+--------------------------------------------------- */
+
+body.brand-home .brand-intro {
+  width: calc(100% - 4rem);
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 4.75rem 0 5.5rem;
+
+  text-align: center;
+}
+
+body.brand-home .brand-intro__inner {
+  max-width: 760px;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+body.brand-home .brand-kicker {
+  margin: 0 0 1.25rem;
+  padding: 0;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.67rem;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+
+  color: #817d70;
+}
+
+body.brand-home .brand-intro h1 {
+  max-width: 660px;
+
+  margin: 0 auto 1.6rem;
+  padding: 0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  font-weight: 400;
+
+  line-height: 1.14;
+
+  letter-spacing: -0.015em;
+
+  color: #292821;
+}
+
+body.brand-home .brand-intro__text {
+  max-width: 620px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: var(--font-body);
+
+  font-size: 0.98rem;
+
+  line-height: 1.75;
+
+  color: #686459;
+}
+
+
+/* ---------------------------------------------------
+   Homepage properties section
+--------------------------------------------------- */
+
+body.brand-home .properties {
+  width: calc(100% - 4rem);
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 0 0 6rem;
+}
+
+body.brand-home .properties__heading {
+  margin: 0 0 2rem;
+
+  padding: 1.15rem 0 0;
+
+  border-top: 1px solid rgba(41, 40, 33, 0.16);
+}
+
+body.brand-home .properties__heading .brand-kicker {
+  margin: 0;
+}
+
+
+/* ---------------------------------------------------
+   Property grid
+--------------------------------------------------- */
+
+body.brand-home .property-grid {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 2rem;
+}
+
+
+/* ---------------------------------------------------
+   Property cards
+--------------------------------------------------- */
+
+body.brand-home .property-card {
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  background: #fbfaf6;
+
+  border: 1px solid rgba(41, 40, 33, 0.1);
+
+  border-radius: 0;
+
+  overflow: hidden;
+}
+
+
+/* ---------------------------------------------------
+   Property card images
+--------------------------------------------------- */
+
+body.brand-home .property-card__image {
+  display: block;
+
+  width: 100%;
+  height: 230px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #ddd9ce;
+}
+
+body.brand-home .property-card__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+
+  transition: transform 500ms ease;
+}
+
+body.brand-home .property-card__image:hover img {
+  transform: scale(1.025);
+}
+
+
+/* ---------------------------------------------------
+   Lake placeholder
+--------------------------------------------------- */
+
+body.brand-home .property-card__image--lake {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d9d5c9 0%,
+      #c8c7bc 100%
+    );
+}
+
+body.brand-home .property-card__image--lake span {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 2.5rem;
+
+  font-style: italic;
+  font-weight: 400;
+
+  color: #5c6059;
+}
+
+
+/* ---------------------------------------------------
+   Property card content
+--------------------------------------------------- */
+
+body.brand-home .property-card__content {
+  margin: 0;
+
+  padding: 1.75rem 1.75rem 2rem;
+}
+
+body.brand-home .property-card__type {
+  margin: 0 0 0.65rem;
+  padding: 0;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+
+  color: #817d70;
+}
+
+body.brand-home .property-card h2 {
+  margin: 0 0 0.45rem;
+  padding: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 1.85rem;
+  font-weight: 400;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.01em;
+
+  color: #292821;
+}
+
+body.brand-home .property-card__location {
+  margin: 0 0 1.2rem;
+  padding: 0;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.64rem;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+
+  color: #817d70;
+}
+
+body.brand-home .property-card__description {
+  max-width: 440px;
+
+  margin: 0 0 1.4rem;
+  padding: 0;
+
+  font-family: var(--font-body);
+
+  font-size: 0.93rem;
+
+  line-height: 1.65;
+
+  color: #656156;
+}
+
+
+/* ---------------------------------------------------
+   Property links
+--------------------------------------------------- */
+
+body.brand-home .property-card__link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin: 0;
+  padding: 0 0 0.3rem;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+
+  color: #292821;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #292821;
+}
+
+body.brand-home .property-card__link span {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0.95rem;
+
+  line-height: 1;
+
+  transition: transform 200ms ease;
+}
+
+body.brand-home .property-card__link:hover span {
+  transform: translateX(3px);
+}
+
+
+/* ---------------------------------------------------
+   Coming soon
+--------------------------------------------------- */
+
+body.brand-home .property-card__coming {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+
+  color: #817d70;
+}
+
+
+/* ---------------------------------------------------
+   Homepage footer
+--------------------------------------------------- */
+
+body.brand-home .brand-footer {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #f1eee6;
+
+  border-top: 1px solid rgba(41, 40, 33, 0.12);
+}
+
+body.brand-home .brand-footer__inner {
+  width: calc(100% - 4rem);
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 1.5rem 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.6rem;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  color: #817d70;
+}
+
+
+/* ===================================================
+   RESPONSIVE — TABLET / MOBILE
+   =================================================== */
+
+@media (max-width: 720px) {
+
+
+  /* =================================================
+     PROPERTY PAGE
+     ================================================= */
+
+
+  .hero {
+    padding-bottom: 3.5rem;
   }
 
+
+  /* Navigation */
+
+  .nav {
+    max-width: none;
+
+    padding: 1.35rem 1.15rem 0;
+  }
+
+  .nav__mark--link {
+    font-size: 1rem;
+  }
+
+  .nav__cta {
+    font-size: 0.65rem;
+
+    padding: 0.45rem 0.7rem;
+  }
+
+
+  /* Hero */
+
+  .hero__content {
+    max-width: none;
+
+    padding: 3.75rem 1.15rem 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.35rem, 10vw, 3.1rem);
+
+    line-height: 1.04;
+  }
+
+  .hero__sub {
+    font-size: 0.98rem;
+
+    line-height: 1.6;
+  }
+
+
+  /* Badges */
+
+  .hero__badges {
+    gap: 0.45rem;
+
+    margin-bottom: 1.75rem;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+
+    padding: 0.35rem 0.6rem;
+  }
+
+
+  /* Buttons */
+
+  .button {
+    font-size: 0.7rem;
+
+    padding: 0.8rem 1.15rem;
+  }
+
+  .button--secondary {
+    margin-left: 0.45rem;
+  }
+
+
+  /* Gallery */
+
+  .gallery {
+    max-width: none;
+
+    padding: 2rem 1.15rem;
+  }
+
+  .gallery__grid {
+    grid-template-columns: 1fr;
+
+    gap: 0.65rem;
+  }
+
+  .gallery__grid img {
+    height: 210px;
+  }
+
+
+  /* General sections */
+
+  section {
+    padding: 3.5rem 1.15rem;
+  }
+
+  .story h2,
+  .amenities h2,
+  .sleep h2,
+  .availability h2,
+  .how h2 {
+    font-size: 1.7rem;
+  }
+
+
+  /* Amenities */
+
+  .amenity-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Sleeping */
+
+  .sleep-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Calendar */
+
+  .calendar {
+    padding: 1rem;
+  }
+
+  .calendar__grid {
+    gap: 3px;
+  }
+
+  .day {
+    font-size: 0.75rem;
+  }
+
+
+  /* Booking list */
+
+  .how-list li {
+    gap: 0.75rem;
+
+    font-size: 0.92rem;
+  }
+
+
+  /* Footer */
+
+  .footer {
+    padding: 2.5rem 1.15rem 3rem;
+
+    font-size: 0.68rem;
+  }
+
+
+  /* =================================================
+     SOUTH LIGHT STAYS HOMEPAGE
+     ================================================= */
+
+
+  body.brand-home .brand-header__inner {
+    width: calc(100% - 2.5rem);
+
+    padding: 2.75rem 0 0.75rem;
+  }
+
+  body.brand-home .brand-logo {
+    font-size: 1.75rem;
+  }
+
+
+  /* Intro */
+
+  body.brand-home .brand-intro {
+    width: calc(100% - 2.5rem);
+
+    padding: 3.75rem 0 4rem;
+  }
+
+  body.brand-home .brand-intro h1 {
+    max-width: 560px;
+
+    font-size: 2.15rem;
+
+    line-height: 1.15;
+  }
+
+  body.brand-home .brand-intro__text {
+    font-size: 0.93rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* Properties */
+
+  body.brand-home .properties {
+    width: calc(100% - 2.5rem);
+
+    padding-bottom: 4.5rem;
+  }
+
+  body.brand-home .property-grid {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+  }
+
+
+  /* IMPORTANT:
+     Keep the property image compact on phones.
+     This prevents the Mountain card from dominating
+     the entire mobile screen.
+  */
+
+  body.brand-home .property-card__image {
+    height: 180px;
+  }
+
+
+  /* Card content */
+
+  body.brand-home .property-card__content {
+    padding: 1.4rem 1.4rem 1.6rem;
+  }
+
+  body.brand-home .property-card h2 {
+    font-size: 1.65rem;
+  }
+
+  body.brand-home .property-card__description {
+    font-size: 0.9rem;
+  }
+
+
+  /* Homepage footer */
+
+  body.brand-home .brand-footer__inner {
+    width: calc(100% - 2.5rem);
+
+    padding: 1.25rem 0;
+
+    font-size: 0.55rem;
+  }
+}
+
+
+/* ===================================================
+   RESPONSIVE — SMALL PHONES
+   =================================================== */
+
+@media (max-width: 430px) {
+
+
+  /* =================================================
+     PROPERTY PAGE
+     ================================================= */
+
+
+  .nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav__mark--link {
+    font-size: 0.95rem;
+  }
+
+  .nav__cta {
+    font-size: 0.6rem;
+
+    padding: 0.4rem 0.6rem;
+  }
+
+
+  .hero__content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero__sub {
+    font-size: 0.92rem;
+  }
+
+
+  /* Stack badges */
+
+  .hero__badges {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  /* Stack booking buttons */
+
+  .button--secondary {
+    display: block;
+
+    width: fit-content;
+
+    margin: 0.65rem 0 0;
+  }
+
+
+  /* Gallery */
+
+  .gallery {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .gallery__grid img {
+    height: 190px;
+  }
+
+
+  /* =================================================
+     SOUTH LIGHT STAYS HOMEPAGE
+     ================================================= */
+
+  body.brand-home .brand-header__inner {
+    width: calc(100% - 2rem);
+
+    padding-top: 2.5rem;
+  }
+
+  body.brand-home .brand-logo {
+    font-size: 1.65rem;
+  }
+
+  body.brand-home .brand-intro {
+    width: calc(100% - 2rem);
+
+    padding-top: 3.25rem;
+  }
+
+  body.brand-home .brand-intro h1 {
+    font-size: 2rem;
+  }
+
+  body.brand-home .brand-intro__text {
+    font-size: 0.9rem;
+  }
+
+  body.brand-home .properties {
+    width: calc(100% - 2rem);
+  }
+
+
+  /* Even more compact image on very small phones */
+
+  body.brand-home .property-card__image {
+    height: 165px;
+  }
 }
