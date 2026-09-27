@@ -493,3 +493,213 @@ section {
   .gallery__grid { grid-template-columns: 1fr; }
   .sleep-grid { grid-template-columns: 1fr; }
 }
+/* ---------------------------------------------------
+   South Light Stays brand homepage
+--------------------------------------------------- */
+
+.brand-hero {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--pine-950) 0%,
+    var(--pine-800) 65%,
+    var(--pine-700) 100%
+  );
+  color: var(--snow-050);
+  overflow: hidden;
+  padding: 6rem 1.5rem 7rem;
+}
+
+.brand-hero .hero__contour {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+.brand-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.brand-hero__name {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--amber-300);
+  margin: 0 0 2.5rem;
+}
+
+.brand-hero__tagline {
+  max-width: 720px;
+  font-size: clamp(2.5rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.brand-hero__intro {
+  max-width: 650px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: rgba(251, 250, 246, 0.86);
+  margin: 0;
+}
+
+
+/* ---------------------------------------------------
+   Property cards
+--------------------------------------------------- */
+
+.properties {
+  max-width: 1100px;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.property-card {
+  background: var(--snow-100);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.property-card__image,
+.property-card__placeholder {
+  height: 300px;
+  overflow: hidden;
+}
+
+.property-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.property-card__placeholder {
+  background:
+    linear-gradient(
+      145deg,
+      var(--pine-800),
+      var(--pine-700)
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property-card__placeholder span {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--snow-050);
+  font-style: italic;
+}
+
+.property-card__content {
+  padding: 2rem;
+}
+
+.property-card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--amber-500);
+  margin: 0 0 0.6rem;
+}
+
+.property-card h2 {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+
+.property-card__location {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777267;
+  margin: 0 0 1.25rem;
+}
+
+.property-card__content > p:not(.property-card__eyebrow):not(.property-card__location) {
+  color: #3A362F;
+  margin-bottom: 1.5rem;
+}
+
+.property-card__link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pine-800);
+  text-decoration: none;
+  border-bottom: 1px solid var(--pine-800);
+  padding-bottom: 0.2rem;
+}
+
+.property-card__link:hover {
+  color: var(--amber-500);
+  border-color: var(--amber-500);
+}
+
+.property-card__coming {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777267;
+}
+
+
+/* ---------------------------------------------------
+   Property-page navigation
+--------------------------------------------------- */
+
+.nav__mark--link {
+  text-decoration: none;
+}
+
+.nav__mark--link:hover {
+  color: var(--amber-300);
+}
+
+
+/* ---------------------------------------------------
+   Responsive
+--------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+  .brand-hero {
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .brand-hero__name {
+    margin-bottom: 1.75rem;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-card__image,
+  .property-card__placeholder {
+    height: 240px;
+  }
+
+}
